@@ -18,11 +18,11 @@ pipeline{
         // Stage2 : Testing
         stage ('Test'){
             steps {
-               nexusArtifactUploader artifacts: [[artifactId: 'VinayDevOpsLab', classifier: '', file: 'target/VinaysDevOpsLab-0.0.10.war', type: 'war']], credentialsId: '6db65c96-4eb9-40d6-804a-610e9afc0ab8', groupId: 'com.vinaysdevopslab', nexusUrl: '172.20.10.148:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'VinaysDevOpsLab-SNAPSHOT', version: '0.0.10' 
+             nexusArtifactUploader artifacts: [[artifactId: 'VinayDevOpsLab', classifier: '', file: '/var/lib/jenkins/workspace/PiplelineJob/target/VinayDevOpsLab-0.0.11.war', type: 'war']], credentialsId: '6db65c96-4eb9-40d6-804a-610e9afc0ab8', groupId: 'com.vinaysdevopslab', nexusUrl: 'VinaysDevOpsLab-SNAPSHOT:8081/nexus', nexusVersion: 'nexus3', protocol: 'http', repository: 'VinaysDevOpsLab-SNAPSHOT', version: '0.0.11'  
 
             }
         }
-        // Stage 3: Publish Artifact to Nexus
+        // Stage 3: Testing
         stage ('Publish to Nexus'){
             steps {
                 echo ' testing......'
