@@ -18,7 +18,7 @@ pipeline{
         // Stage2 : Testing
         stage ('Test'){
             steps {
-             nexusArtifactUploader artifacts: [[artifactId: 'VinayDevOpsLab', classifier: '', file: '/var/lib/jenkins/workspace/PiplelineJob/target/VinayDevOpsLab-0.0.11.war', type: 'war']], credentialsId: '6db65c96-4eb9-40d6-804a-610e9afc0ab8', groupId: 'com.vinaysdevopslab', nexusUrl: 'VinaysDevOpsLab-SNAPSHOT:8081/repository/VinaysDevOpsLab-SNAPSHOT/', nexusVersion: 'nexus3', protocol: 'http', repository: 'VinaysDevOpsLab-SNAPSHOT', version: '0.0.11'
+             nexusArtifactUploader artifacts: [[artifactId: 'VinayDevOpsLab', classifier: '', file: '/var/lib/jenkins/workspace/PiplelineJob/target/VinayDevOpsLab-0.0.11.war', type: 'war']], credentialsId: '6db65c96-4eb9-40d6-804a-610e9afc0ab8', groupId: 'com.vinaysdevopslab', nexusUrl: '172.20.10.148:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'VinaysDevOpsLab-SNAPSHOT', version: '0.0.11'
 
             }
         }
